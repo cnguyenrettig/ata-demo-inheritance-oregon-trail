@@ -1,5 +1,7 @@
 package main.java.player;
 
+import main.java.abilities.Trading;
+
 public class Traveller {
     private final static int MAX_HEALTH = 10;
     private final static int DAILY_RATION = 1;
@@ -18,10 +20,14 @@ public class Traveller {
 
     //methods - subclasses inherit
     public void hunt(){
-       this.food +=1;
+        Trading.AvailableSupplies.add("Fur");
+
+        this.food +=1;
+
     }
 
     public void eat(){
+
         if(this.food >= DAILY_RATION){
             this.food-= DAILY_RATION;
         }
