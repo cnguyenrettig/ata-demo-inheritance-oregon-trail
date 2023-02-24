@@ -20,8 +20,6 @@ public class Traveller {
 
     //methods - subclasses inherit
     public void hunt(){
-        Trading.AvailableSupplies.add("Fur");
-
         this.food +=1;
 
     }
